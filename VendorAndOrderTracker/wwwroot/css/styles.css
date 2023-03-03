@@ -1,11 +1,16 @@
 div#footer {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
+  left: 0px;
   width: 100%;
   color: #CCC;
   background: #333;
   padding: 8px;
+}
+
+body {
+  text-align: center;
+  margin-left: 20px;
 }
 
 h1 {
@@ -13,10 +18,7 @@ h1 {
 }
 
 .orderDetails {
-  text-align: center;
+  text-align: left
 }
 
-body {
-  text-align: center;
-}
 

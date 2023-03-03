@@ -7,15 +7,23 @@
 <h2>@Model["vendor"].Name</h2>
 
 <p>@Model["vendor"].Description</p>
+<hr> 
 
-<h3>Here are all the orders from this vendor:</h3>
 
-<ol>
+@if (@Model.Count == 0)
+{
+  <h3>No Orders have been made yet </h3>
+}
+
+<h3>Vendor Orders:</h3>
+<br>
+
+<ul>
   @foreach (Order Order in @Model["order"])
   {
-    <li><a href='/vendors/@Model["vendor"].Id/orders/@Order.Id'>@Order.Description</a></li>
+    <li><a href='/vendors/@Model["vendor"].Id/orderInfo'>@Order.Description</a></li>
   }
-</ol>
+</ul>
 
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new Order</a></p>
 <p><a href='/vendors'>Return to vendor list</a></p>

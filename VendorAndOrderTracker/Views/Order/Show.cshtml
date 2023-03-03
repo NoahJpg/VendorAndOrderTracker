@@ -6,6 +6,9 @@
 <h1>Pierre's Bakery Vender Orders: </h1>
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
+<br>
+<a href='/vendors'>View all vendors</a>
+
 <hr>
 <div class="orderDetails">
 @foreach(Order order in Model["order"])
@@ -21,4 +24,4 @@
 <br>
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
 <br>
-<a href='/vendors'>View all orders</a>
+<a href='/vendors'>View all vendors</a>
