@@ -1,17 +1,24 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VenderAndOrderTracker.Models;
+using System;
+using System.Collections.Generic;
 
 namespace VenderAndOrderTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests 
   {
-    // Test methods go here
+    // [TestMethod]
+    // public void Dispose()
+    // {
+    //   Vendor.ClearAll();
+    // }
+
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void VendorConstructor_CreatesInstancesOfVendor_Vendor()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      Vendor newVendor = new Vendor("test vendor");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }
