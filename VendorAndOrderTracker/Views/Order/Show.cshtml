@@ -10,8 +10,8 @@
 <div class="orderDetails">
 @foreach(Order order in Model["order"])
 {
-    <h2>Item: @order.Title</h2>
-    <p>Quantity: @order.Description</p>
+    <h3>Item: <em>@order.Title</em></h3>
+    <p>Description: @order.Description</p>
     <p>Price: $@order.Price</p>
     <p>Delivery Date: @order.Date</p>
     <p>Vendor: @Model["vendor"].Name</p>
