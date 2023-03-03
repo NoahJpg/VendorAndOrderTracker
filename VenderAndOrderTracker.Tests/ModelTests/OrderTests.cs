@@ -53,5 +53,19 @@ namespace VenderAndOrderTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string description1 = "10 Breads";
+      string description2 = "20 Pastries";
+      Order newOrder1 = new Order(description1);
+      Order newOrder2 = new Order(description2);
+      List<Order> newList = new List<Order> {newOrder1, newOrder2};
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
