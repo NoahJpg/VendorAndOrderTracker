@@ -1,0 +1,15 @@
+@using ToDoList.Models;
+
+<h3>Here are all the orders from this vendor:</h3>
+
+
+<ol>
+  @foreach (Order Order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@Order.Id'>@Order.Description</a></li>
+  }
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new Order</a></p>
+<p><a href='/vendors'>Return to vendor list</a></p>
+<p><a href='/'>Return to Main Page</a></p>
