@@ -76,6 +76,10 @@ namespace VenderAndOrderTracker.Tests
       string name = "Suzie's Cafe";
       Vendor newVendor = new Vendor(name);
       newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
     }
     
   }
