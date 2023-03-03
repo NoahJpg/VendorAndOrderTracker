@@ -12,7 +12,7 @@ namespace VendorAndOrderTracker.Controllers
     public ActionResult Index()
     {
       List<Vendor> allVendors = Vendor.GetAll();
-      return View(allVendors);
+      return View("Index", allVendors);
     }
 
     [HttpGet("/vendors/new")]
@@ -47,7 +47,7 @@ namespace VendorAndOrderTracker.Controllers
       Order newOrder = new Order(orderDescription);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
-      model.Add("orders", vendorOrders);
+      model.Add("order", vendorOrders);
       model.Add("vendor", foundVendor);
       return View("show", model);
     }
