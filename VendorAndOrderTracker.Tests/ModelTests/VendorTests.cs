@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VenderAndOrderTracker.Models;
+using VendorAndOrderTracker.Models;
 using System;
 using System.Collections.Generic;
 
-namespace VenderAndOrderTracker.Tests
+namespace VendorAndOrderTracker.Tests
 {
   [TestClass]
   public class VendorTests :IDisposable

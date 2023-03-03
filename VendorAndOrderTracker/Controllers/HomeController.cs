@@ -1,13 +1,13 @@
-using VenderAndOrderTracker.Models;
+using VendorAndOrderTracker.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace VenderAndOrderTracker.Controllers
+namespace VendorAndOrderTracker.Controllers
 {
   public class HomeController : Controller
   {
 
     [Route("/")]
-    public ActionResult Letter() 
+    public ActionResult Index() 
     {
       return View();
     }

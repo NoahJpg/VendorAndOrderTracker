@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using VenderAndOrderTracker.Models;
+using VendorAndOrderTracker.Models;
 
-namespace VenederAndOrderTracker.Controller
+namespace VendorAndOrderTracker.Controllers
 {
   public class VendorController : Controller
   {
@@ -24,12 +24,12 @@ namespace VenederAndOrderTracker.Controller
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName)
     {
-      Vendor newVendor = newVendor(vendorName);
-      return RedirecToAction("Index");
+      Vendor newVendor = new Vendor(vendorName);
+      return RedirectToAction("Index");
     }
 
     [HttpGet("/vendors/{id}")]
-    public AcionResult Show(int id)
+    public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor selectedVendor = Vendor.Find(id);

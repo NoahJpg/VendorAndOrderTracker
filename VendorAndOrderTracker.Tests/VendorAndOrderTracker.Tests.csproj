@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VenderAndOrderTracker\VenderAndOrderTracker.csproj" />  
+    <ProjectReference Include="..\VendeorAndOrderTracker\VendorAndOrderTracker.csproj" />  
   </ItemGroup>
 
 </Project>
