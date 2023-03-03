@@ -6,8 +6,12 @@ using System;
 namespace VenderAndOrderTracker.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
     public void OrderConstrctor_CreatesIntanceOfOrder_Order()
@@ -38,6 +42,16 @@ namespace VenderAndOrderTracker.Tests
       string result = newOrder.Description;
 
       Assert.AreEqual(updatedDescription, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
