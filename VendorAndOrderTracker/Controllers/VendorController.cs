@@ -52,6 +52,6 @@ namespace VendorAndOrderTracker.Controllers
       return View("show", model);
     }
 
-    
+
   }
 }
