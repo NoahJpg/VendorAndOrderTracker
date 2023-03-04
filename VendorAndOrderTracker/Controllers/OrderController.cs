@@ -15,6 +15,17 @@ namespace VendorAndOrderTracker.Controllers
       return View(vendor);
     }
 
+    [HttpGet("/vendors/{vendorId}/Info")]
+    public ActionResult Index(int vendorId, int orderId)
+    {
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order foundOrder = Order.Find(orderId);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("vendor", foundVendor);
+      model.Add("order", foundOrder);
+      return View(model);
+    }
+
     [HttpPost("/vendors/{vendorId}/orderInfo")]
     public ActionResult Create(int vendorId, string orderTitle, string orderDescription, decimal orderPrice, DateTime orderDate)
     {
